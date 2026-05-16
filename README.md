@@ -45,7 +45,6 @@
       </td>
     </tr>
   </table>
-  <sup>Add your own screenshot by placing a <code>*.png</code> in <code>screenshots/</code> and updating this section.</sup>
 </div>
 
 ---
