@@ -1,0 +1,42 @@
+[Desktop Entry]
+Name=Finder
+Comment=Browse Files
+Exec=finder %U
+Icon=finder
+Terminal=false
+Type=Application
+Categories=Utility;FileManager;
+StartupNotify=true
+Actions=new-window;desktop;documents;downloads;music;pictures;videos;recents;
+
+[Desktop Action new-window]
+Name=New Finder Window
+Exec=finder
+
+[Desktop Action desktop]
+Name=Desktop
+Exec=finder --action desktop
+
+[Desktop Action documents]
+Name=Documents
+Exec=finder --action documents
+
+[Desktop Action downloads]
+Name=Downloads
+Exec=finder --action downloads
+
+[Desktop Action music]
+Name=Music
+Exec=finder --action music
+
+[Desktop Action pictures]
+Name=Pictures
+Exec=finder --action pictures
+
+[Desktop Action videos]
+Name=Videos
+Exec=finder --action videos
+
+[Desktop Action recents]
+Name=Recents
+Exec=finder recent:///

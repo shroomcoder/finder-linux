@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -eu
+
+if [ "${1:-}" = "--action" ]; then
+  case "${2:-}" in
+    desktop)   set -- "$HOME/Desktop" ;;
+    documents) set -- "$HOME/Documents" ;;
+    downloads) set -- "$HOME/Downloads" ;;
+    music)     set -- "$HOME/Music" ;;
+    pictures)  set -- "$HOME/Pictures" ;;
+    videos)    set -- "$HOME/Videos" ;;
+    *)
+      echo "Unknown action: $2" >&2
+      exit 1
+      ;;
+  esac
+fi
+
+if command -v nemo >/dev/null 2>&1; then
+  FM="nemo"
+elif command -v nautilus >/dev/null 2>&1; then
+  FM="nautilus"
+elif command -v dolphin >/dev/null 2>&1; then
+  FM="dolphin"
+elif command -v thunar >/dev/null 2>&1; then
+  FM="thunar"
+else
+  FM="xdg-open"
+fi
+
+exec "$FM" "$@"

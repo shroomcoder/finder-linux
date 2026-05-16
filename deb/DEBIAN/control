@@ -1,0 +1,13 @@
+Package: finder-linux
+Version: 1.0-1
+Section: utils
+Priority: optional
+Architecture: all
+Maintainer: Manish Bhoumik <manishbhoumik0@gmail.com>
+Depends: xdg-utils
+Recommends: nemo | nautilus | dolphin | thunar
+Description: macOS-style Finder launcher for Linux
+ A branded launcher that wraps existing Linux file managers
+ (Nemo, Nautilus, Dolphin, Thunar) with a macOS-style "Finder"
+ experience. Includes quick-access desktop actions for common
+ folders and a custom icon set.
